@@ -1,0 +1,268 @@
+/* ============================
+   Tema morado/lila (limpio)
+   ============================ */
+:root{
+  --bg1:#130922;      /* morado profundo (arriba) */
+  --bg2:#1d0f3a;      /* violeta oscuro (abajo) */
+  --card:#17122b;     /* tarjetas con tinte morado */
+  --text:#ecebf3;     /* texto principal */
+  --accent:#c084fc;   /* lila de acento */
+}
+
+*{ box-sizing:border-box; }
+
+html,body{ margin:0; padding:0; }
+
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 60%);
+  color: var(--text);
+}
+
+/* Contenedor base */
+.container{
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+/* ============================
+   Encabezado (hero)
+   ============================ */
+.hero{
+  padding: 48px 0 36px;
+  /* halo lila sutil arriba */
+  background: radial-gradient(1200px 400px at 50% -50%, rgba(192,132,252,.28), transparent 60%);
+  text-align: center;
+}
+
+/* fila del hero: avatar + nombre */
+.hero-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;           /* distancia entre foto y nombre */
+}
+
+.hero h1{
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.hero .subtitle{
+  opacity: .85;
+  margin: 0;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+/* avatar del hero */
+.hero-avatar{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(192,132,252,.28); /* aro lila suave */
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* ============================
+   Secciones y tipografía
+   ============================ */
+.bloque{ margin: 28px 0; }
+
+.bloque h2{
+  margin: 0 0 14px;
+  font-size: clamp(20px, 3vw, 28px);
+}
+
+.bloque p{ line-height: 1.65; }
+
+/* ============================
+   Disposición dos columnas
+   ============================ */
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+/* ============================
+   Medios (video/iframe)
+   ============================ */
+.media{
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+.media video,
+.media iframe{ width:100%; height:100%; display:block; }
+
+/* ============================
+   Tarjetas (misma estética)
+   ============================ */
+.card{
+  background: linear-gradient(180deg, rgba(23,17,43,.92), rgba(23,17,43,.74));
+  border: 1px solid rgba(192,132,252,.12);
+  padding: 18px 16px;
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.texto-video{
+  text-align: center;
+  margin-top: 14px;
+  font-size: clamp(14px, 1.6vw, 15.5px);
+}
+.texto-video h3{ margin: 0 0 8px; font-weight: 700; }
+
+/* tarjeta específica para "Sobre mí" */
+.about-card{
+  max-width: 900px;   /* ancho agradable como tu captura */
+  margin: 0 auto;     /* centrada */
+}
+.about-card h2{ margin-top:0; margin-bottom:8px; }
+
+/* ============================
+   Galería 3 columnas
+   ============================ */
+.grid-3{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.foto{
+  margin: 0;
+  background: var(--card);
+  border: 1px solid rgba(192,132,252,.12);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+.foto img{ width:100%; height:220px; object-fit:cover; display:block; }
+.foto figcaption{
+  padding: 8px 10px;
+  opacity: .85;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ============================
+   Enlaces (grid responsive)
+   ============================ */
+.links{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.links a{
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid rgba(192,132,252,.12);
+  padding: 12px 14px;
+  border-radius: 14px;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.links a:hover{
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+/* ============================
+   Pie de página
+   ============================ */
+.footer{
+  margin-top: 28px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(192,132,252,.12);
+  text-align: center;
+  opacity: .6;
+}
+
+/* ============================
+   Responsive
+   ============================ */
+@media (max-width: 860px){
+  .two-col{ grid-template-columns: 1fr; }
+  .texto-video{ margin-top: 0; }
+  .grid-3{ grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px){
+  .grid-3{ grid-template-columns: 1fr; }
+  .hero-row{
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* --- Sobre mí a ancho completo del container --- */
+.about-card{
+  width: 100%;        /* ocupa todo el ancho del .container */
+  max-width: none;    /* elimina el límite de 900px */
+  margin: 0;          /* quita el centrado con auto */
+  padding: 22px 28px; /* un poco más de aire */
+}
+
+/* (opcional) Mantén el texto centrado y legible dentro de la tarjeta */
+.about-card p{
+  max-width: 90ch;        /* ancho cómodo de lectura */
+  margin-inline: auto;    /* centra el párrafo dentro de la tarjeta amplia */
+}
+
+/* ===== Links sin cajas (texto limpio) ===== */
+.links{
+  /* si quieres que sigan en una sola fila centrada */
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: center;
+  column-gap: 28px;
+  row-gap: 12px;
+}
+
+.links a{
+  display: inline-block;     /* ya no ocupa toda la celda */
+  padding: 0;                /* sin relleno */
+  background: transparent;   /* sin fondo */
+  border: none;              /* sin borde */
+  border-radius: 0;          /* sin esquinas redondas */
+  box-shadow: none;          /* sin sombra */
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  color: var(--text);
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+
+.links a:hover{
+  transform: none;                 /* quita el “salto” */
+  color: var(--accent);            /* lila al pasar el mouse */
+  text-decoration-color: var(--accent);
+}
+
+/* Accesibilidad: estilo al enfocar con teclado */
+.links a:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+@media (max-width: 560px){
+  .links{
+    grid-auto-flow: row;          /* una debajo de otra */
+    grid-template-columns: 1fr;   /* ocupan todo el ancho */
+    justify-content: start;
+  }
+}

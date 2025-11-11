@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curriculum – Raquel Yolanda Meraz Marrufo</title>
+  <meta name="description" content="Curriculum con datos generales, galería, video y enlaces." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Encabezado con foto de perfil al lado del nombre -->
+  <header class="hero">
+    <div class="container hero-row">
+      <img class="hero-avatar" src="assets/Fotoperfil.jpeg" alt="Foto de perfil de Raquel">
+      <div>
+        <h1>Raquel Yolanda Meraz Marrufo</h1>
+        <p class="subtitle">Información general (Curriculum)</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+   <section class="bloque" id="perfil">
+  <div class="card texto-video about-card">
+    <h2>Sobre mí</h2>
+    <p>
+     Soy estudiante de desarrollo de software, cursando decimocuatrimestre de Ingeniería en Gestión del Software. Me especializo en front-end creando interfaces limpias, accesibles y responsivas. Disfruto trabajar con PHP y MySQL para dar soporte al back-end cuando se requiere. Me apasiona el sector de uñas y belleza, por lo que enfoco mis proyectos en catálogos, reservas y vitrinas digitales para salones y marcas, cuidando el detalle visual, el orden del código y las buenas prácticas.
+      
+    </p>
+  </div>
+</section>
+
+    <!-- 1) PRIMERO: Imágenes de proyectos -->
+    <section class="bloque" id="proyectos">
+      <h2>Proyectos en los que he estado</h2>
+      <div class="grid-3">
+        <figure class="foto">
+          <img src="assets/casavelma.jpg" alt="Proyecto Casa Velma">
+          <figcaption>Casa Velma</figcaption>
+        </figure>
+        <figure class="foto">
+          <img src="assets/tiendavestidos.png" alt="Proyecto Tienda de Vestidos">
+          <figcaption>Tienda de Vestidos</figcaption>
+        </figure>
+        <figure class="foto">
+          <img src="assets/UGCPro.jpg" alt="Proyecto UGC Pro">
+          <figcaption>UGC Pro</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2) DESPUÉS: Video de presentación (debajo de las imágenes) -->
+    <section class="bloque" id="presentacion">
+      <h2>Presentación en video</h2>
+      <div class="two-col">
+        <div class="media">
+          <!-- Si no tienes el mp4, reemplaza por iframe de YouTube -->
+          <video controls poster="assets/Fotoperfil.jpeg">
+            <source src="assets/presentacion.mp4" type="video/mp4" />
+            Tu navegador no soporta el video HTML5.
+          </video>
+        </div>
+
+        <div class="card texto-video">
+          <h3>¿Qué muestra este video?</h3>
+          <p>
+            Breve presentación personal: quién soy, qué estudio y en qué proyectos he participado.
+            Comento habilidades, metas a corto plazo y por qué me gusta programar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  <section class="bloque" id="links">
+  <h2>Enlaces y contacto</h2>
+  <ul class="links">
+    <!-- Perfil -->
+    <li>
+      <a href="https://github.com/Raquel-meraz" target="_blank" rel="noopener">
+        Mi perfil en GitHub
+      </a>
+    </li>
+
+    <!-- Repo del Curriculum -->
+    <li>
+      <a href="https://github.com/Raquel-meraz/Curriculum" target="_blank" rel="noopener">
+        Repositorio: Curriculum
+      </a>
+    </li>
+
+    <!-- WhatsApp (México +52) -->
+    <li>
+      <a href="https://wa.me/526183362803?text=Hola%20Raquel%2C%20vi%20tu%20curriculum" target="_blank" rel="noopener">
+        Escríbeme por WhatsApp
+      </a>
+    </li>
+
+    <!-- Correo -->
+    <li>
+      <a href="mailto:raquelmeraz922@gmail.com?subject=Contacto%20por%20curriculum&body=Hola%20Raquel%2C%20">
+        raquelmeraz922@gmail.com
+      </a>
+    </li>
+  </ul>
+</section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 Raquel Yolanda Meraz Marrufo • Curriculum</small>
+    </div>
+  </footer>
+</body>
+</html>
