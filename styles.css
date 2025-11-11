@@ -266,3 +266,20 @@ body{
     justify-content: start;
   }
 }
+
+/* Sobre mí: título centrado, párrafo justificado */
+.about-card{
+  text-align: left;      /* anula el centrado heredado de .texto-video */
+}
+
+.about-card h2{
+  text-align: center;    /* mantiene el título centrado */
+}
+
+.about-card p{
+  text-align: justify;         /* justifica el párrafo */
+  text-justify: inter-word;    /* reparte espacios entre palabras */
+  hyphens: auto;               /* guiones automáticos si el idioma lo permite */
+  margin: 0;                   /* evita centrado por márgenes */
+  max-width: none;             /* ocupa todo el ancho de la tarjeta */
+}
